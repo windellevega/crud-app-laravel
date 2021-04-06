@@ -13,7 +13,7 @@ composer install
 
 • Edit `.env.example` file place necessary database credentials and save it as `.env`
 
-• Generate Key (Keys will be automatically generated upon creating new Laravel project but you need to generate it manually from clone repository)
+• Generate Key (Keys will be automatically generated on `.env` file upon creating new Laravel project but you need to generate it manually if cloned from a repository)
 ```
 php artisan key:generate
 ```
