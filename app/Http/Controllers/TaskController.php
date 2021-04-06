@@ -85,7 +85,7 @@ class TaskController extends Controller
         $task->task_name = $request->task_name;
         $task->task_details = $request->task_details;
         $task->user_id = $request->user_id;
-        $task->comment = $request->comment;
+        $task->comment = 'Comments: ' . $request->comment; // Prefixing comment field with 'Comments: '
 
         $task->update($task);
         */
