@@ -17,18 +17,18 @@ class UserTableSeeder extends Seeder
     {
         $users = [
             [
-                'firstname' => 'John',
-                'lastname' => 'Doe',
-                'username' => 'johndoe',
-                'email' => 'johndoe@test.com',
-                'password' => Hash::make('pass123')
+                'firstname'     => 'John',
+                'lastname'      => 'Doe',
+                'username'      => 'johndoe',
+                'email'         => 'johndoe@test.com',
+                'password'      => Hash::make('pass123')
             ],
             [
-                'firstname' => 'Jane',
-                'lastname' => 'Doe',
-                'username' => 'janedoe',
-                'email' => 'janedoe@test.com',
-                'password' => Hash::make('pass123')
+                'firstname'     => 'Jane',
+                'lastname'      => 'Doe',
+                'username'      => 'janedoe',
+                'email'         => 'janedoe@test.com',
+                'password'      => Hash::make('pass123')
             ]
         ];
 

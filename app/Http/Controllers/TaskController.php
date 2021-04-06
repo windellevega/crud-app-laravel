@@ -29,9 +29,9 @@ class TaskController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'task_name' => 'required|string',
-            'task_details' => 'required|string',
-            'user_id' => 'required|integer'
+            'task_name'     => 'required|string',
+            'task_details'  => 'required|string',
+            'user_id'       => 'required|integer'
         ]);
 
         if($validator->fails()){
@@ -65,9 +65,9 @@ class TaskController extends Controller
     public function update(Request $request, $id)
     {
         $validator = Validator::make($request->all(), [
-            'task_name' => 'required|string',
-            'task_details' => 'required|string',
-            'user_id' => 'required|integer'
+            'task_name'     => 'required|string',
+            'task_details'  => 'required|string',
+            'user_id'       => 'required|integer'
         ]);
 
         if($validator->fails()){
@@ -75,7 +75,20 @@ class TaskController extends Controller
         }
         
         $task = Task::find($id);
+        
         $task->update($request->all());
+
+        /*
+        Longer Method - this method is useful if you want to do 
+        some processing on certain fields/values before updating
+
+        $task->task_name = $request->task_name;
+        $task->task_details = $request->task_details;
+        $task->user_id = $request->user_id;
+        $task->comment = $request->comment;
+
+        $task->update($task);
+        */
 
         return response(['message' => 'Task has been updated']);
     }
